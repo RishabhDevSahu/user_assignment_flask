@@ -1,0 +1,10 @@
+from flask import Blueprint, jsonify
+
+user_bp = Blueprint("user_bp", __name__)
+
+@user_bp.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "success": True,
+        "message": "User API is running"
+    })
